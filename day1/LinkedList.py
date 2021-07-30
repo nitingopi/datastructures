@@ -1,7 +1,3 @@
-# ! comment
-# ? hello
-# * hi
-#  hello 
 
 class Node:
     def __init__(self, value):
