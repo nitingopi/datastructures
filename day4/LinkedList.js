@@ -48,6 +48,7 @@ class List {
                 if (this.head == this.tail) {
                     this.head = null;
                     this.tail = null;
+                    return true;
                 }
 
                 //! head case
