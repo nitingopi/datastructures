@@ -72,6 +72,17 @@ class List {
         }
         return false;
     }
+
+    recursive(node){
+        if(node == null){
+            return;
+        }
+        this.recursive(node.next);
+        console.log(node.value);
+    }
+    printBackward() {
+        this.recursive(this.head);
+    }
 }
 
 let ls = new List();
@@ -80,14 +91,15 @@ ls.addToBack(2);
 ls.addToBack(3);
 ls.addToFront(4);
 ls.addToFront(5);
-ls.print();
-ls.removeValue(1);
-ls.print();
-ls.removeValue(2);
-ls.print();
-ls.removeValue(3);
-ls.print();
-ls.removeValue(4);
-ls.print();
-ls.removeValue(5);
-ls.print();
+// ls.print();
+// ls.removeValue(1);
+// ls.print();
+// ls.removeValue(2);
+// ls.print();
+// ls.removeValue(3);
+// ls.print();
+// ls.removeValue(4);
+// ls.print();
+// ls.removeValue(5);
+// ls.print();
+ls.printBackward();
