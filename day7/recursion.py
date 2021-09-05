@@ -2,7 +2,7 @@ class Recursion:
     def __init__(self):
         pass
 
-    def factorialWithRecursion(self, value):
+    def factorialWithRecursion(self, value:int ) -> int:
         if value == 0:
             return 1
 

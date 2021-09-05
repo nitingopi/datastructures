@@ -1,42 +1,48 @@
-
 class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
+        # self.prev = None
 
-class List:
+
+class MyList:
     def __init__(self):
         self.head = None
         self.tail = None
 
-    def addToBack(self,value):
-        ref = Node(value)
-        if self.head is None:
-            self.head = ref
-        else:
-            self.tail.next = ref    
-        self.tail = ref    
 
-    def addToFront(self,value):
-        ref = Node(value)
-        if self.head is None:
-            self.tail = ref
+    def addToBack(self, value):
+        node = Node(value)
+        if None is self.head:
+            self.head = node
         else:
-            ref.next = self.head
-      
-        self.head = ref
+            self.tail.next = node
+
+        self.tail = node
+        
+
+    def addToFront(self, value):
+        node = Node(value)
+        if None is self.head:
+            self.tail = node
+        else:
+            node.next = self.head
+        self.head = node
+
 
     def print(self):
         current = self.head
-        while(current != None):
+        while current != None :
             print(current.value)
-            current = current.next    
+            current = current.next
 
-ls = List()
-ls.addToBack(1)
-ls.addToBack(2)
-ls.addToBack(3)
-ls.addToFront(4)
-ls.addToFront(5)
-ls.addToBack(6)
-ls.print()
+
+ll = MyList()
+ll.addToBack(4)
+ll.addToBack(5)
+ll.addToBack(6)
+ll.addToFront(3)
+ll.addToFront(2)
+ll.addToFront(1)
+
+ll.print()
