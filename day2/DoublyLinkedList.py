@@ -4,49 +4,49 @@ class Node:
         self.prev = None
         self.next = None
 
-class List:
+
+class MyDoublyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
 
-    def addToBack(self,value):
-        newNode = Node(value)
-        if self.head is None:
-            self.head = newNode
+    def addToBack(self, value):
+        node = Node(value)
+        if None is self.head:
+            self.head = node    
         else:
-            self.tail.next = newNode
-            newNode.prev = self.tail
+            self.tail.next = node 
+            node.prev = self.tail
+        self.tail = node 
 
-        self.tail = newNode
-
-    def addToFront(self,value):
-        newNode = Node(value)
-        if self.head is None:
-            self.tail = newNode
+    def addToFront(self, value):
+        node = Node(value)
+        if None is self.head:
+            self.tail = node
         else:
-            self.head.prev = newNode
-            newNode.next = self.head
-        self.head = newNode
-
+            self.head.prev = node 
+            node.next = self.head         
+        self.head = node 
+       
     def printForwards(self):
-        currentNode = self.head
-        while currentNode is not None:
-            print(currentNode.value)
-            currentNode = currentNode.next    
+        current = self.head
+        while current is not None:
+            print(current.value)
+            current = current.next
 
     def printBackwards(self):
-        currentNode = self.tail
-        while currentNode is not None:
-            print(currentNode.value)
-            currentNode = currentNode.prev
+        current = self.tail
+        while current is not None:
+            print(current.value)
+            current = current.prev 
 
-ls = List()
-ls.addToBack(3)
-ls.addToBack(4)
-ls.addToFront(2)
-ls.addToFront(1)
+dll = MyDoublyLinkedList()
+dll.addToBack(4)
+dll.addToBack(5)
+dll.addToBack(6)
+dll.addToFront(3)
+dll.addToFront(2)
+dll.addToFront(1)
 
-print(f'Printing forward')
-ls.printForwards()
-print(f'Printing backwards')
-ls.printBackwards()
+# dll.printForwards()
+dll.printBackwards()
