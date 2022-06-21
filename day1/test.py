@@ -3,3 +3,6 @@ ls.insert(0,11);
 print(ls);
 ls.sort();
 print(ls);
+ls.sort(reverse=True);
+print(ls);
+

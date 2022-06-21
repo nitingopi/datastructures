@@ -11,6 +11,8 @@ class List:
 
     def add(self,value):
         ref = Node(value)
+        print(f"ref {ref}")
+        print(f"ref.value {ref.value}")
         if self.head is None:
             self.head = ref
         else:
