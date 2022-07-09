@@ -40,12 +40,12 @@ class Tree:
 
 
 ped = Tree()
-# ped.root = None
+ped.root = None
 ped.root = ped.addNode(ped.root, 5)
 ped.addNode(ped.root, 7)
 ped.addNode(ped.root, 9)
 ped.addNode(ped.root,1)
 ped.addNode(ped.root,3)
-# ped.printInOrder(ped.root)
-ped.printPreOrder(ped.root)
+ped.printInOrder(ped.root)
+# ped.printPreOrder(ped.root)
 

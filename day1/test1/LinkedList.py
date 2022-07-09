@@ -1,40 +1,34 @@
 class Node:
-    def __init__(self, value):
+    def __init__(self, value) -> None:
         self.value = value
         self.next = None
 
-
-class List:
-    def __init__(self):
+class MyList:
+    def __init__(self) -> None:
         self.head = None
         self.tail = None
 
-    def add(self, value) -> Node:
+    def add(self, value) -> None:
         ref = Node(value)
         if self.head is None:
             self.head = ref
         else:
-            current = self.tail
-            current.next = ref
-
-        self.tail = ref
-
+            # current = self.tail
+            # current.next = ref
+            self.tail.next = ref
+        self.tail = ref 
 
     def print(self) -> None:
-        current = self.head
-        if current is None:
-            print("list is empty")
+        if self.head is None:
+            print("The list is empty")
         else:
-            printstr = ""
+            current = self.head
             while current is not None:
-                # print(type(current))
-                # print(f"{current.value} -> ")
-                printstr += f" {current.value} ->"
-                current = current.next    
-            print(printstr)    
+                print(f"{current.value}")
+                current = current.next
 
-mylist = List()
-mylist.add(2)
-mylist.add(3)
-mylist.add(4)
-mylist.print()                
+
+myls = MyList() 
+myls.add(9)
+myls.add(8)
+myls.print()               
