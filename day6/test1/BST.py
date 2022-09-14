@@ -1,4 +1,4 @@
-from xmlrpc.client import Boolean
+# from xmlrpc.client import Boolean
 
 
 class Node:
@@ -42,7 +42,7 @@ class Tree:
             self.print_post_order(current.right)
             print(current.value)   
 
-    def search(self, current, search_value) -> Boolean:
+    def search(self, current, search_value) -> bool:
         # 1. if value is found return true
         if current:
             if current.value == search_value:
